@@ -1,0 +1,127 @@
+/* Importation des polices */
+body {
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: #222;
+    padding: 15px 0;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    height: 100px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav-links a:hover {
+    color: red;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    background: url('img/karate_background.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  }
+  
+  header h1 {
+    font-size: 30px;
+  }
+  
+  header p {
+    font-size: 1.2em;
+  }
+  
+  /* Sections */
+  main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #222;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  
+  .social-icons {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-icons li {
+    display: inline;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #f39c12;
+  }
