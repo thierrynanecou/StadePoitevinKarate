@@ -7,6 +7,11 @@ body {
     color: #333;
   }
   
+  /* Effet de défilement fluide */
+html {
+  scroll-behavior: smooth;
+}
+
   /* Navbar */
   nav {
     background-color: #222;
@@ -85,6 +90,22 @@ body {
     border-bottom: 2px solid #f39c12;
     padding-bottom: 5px;
   }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #cc5500;
+}
   
   /* Footer */
   footer {
@@ -122,6 +143,19 @@ body {
     transition: color 0.3s ease;
   }
   
-  .social-icons a:hover {
-    color: #f39c12;
+  .social-icons a {
+    transition: color 0.3s ease;
   }
+  
+  .social-icons a[href*="facebook.com"]:hover {
+    color: #1877F2; /* Bleu officiel de Facebook */
+  }
+  
+  .social-icons a[href*="instagram.com"]:hover {
+    color: #E4405F; /* Rose-rouge d'Instagram */
+  }
+  
+  .social-icons a[href*="youtube.com"]:hover {
+    color: #FF0000; /* Rouge de YouTube */
+  }
+  
