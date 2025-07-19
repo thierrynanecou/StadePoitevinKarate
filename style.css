@@ -1,161 +1,251 @@
 /* Importation des polices */
 body {
-    font-family: "Manrope", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-  }
-  
-  /* Effet de défilement fluide */
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: white;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-  /* Navbar */
-  nav {
-    background-color: #222;
-    padding: 15px 0;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    padding: 0 20px;
-  }
-  
-  .logo {
-    height: 100px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li {
-    display: inline;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    position: relative;
-  }
-  
-  .nav-links a:hover {
-    color: red;
-  }
-  
-  /* Header */
-  header {
-    text-align: center;
-    padding: 80px 20px;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    background: url('img/karate_background.jpg') center/cover no-repeat;
-  padding: 100px 20px;
-  }
-  
-  header h1 {
-    font-size: 30px;
-  }
-  
-  header p {
-    font-size: 1.2em;
-  }
-  
-  /* Sections */
-  main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-  }
-  
-  section {
-    margin-bottom: 40px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    color: #222;
-    border-bottom: 2px solid #f39c12;
-    padding-bottom: 5px;
-  }
+/* Navbar */
+nav {
+  background-color: black;
+  padding: 15px 0;
+}
 
-  .btn {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 5px;
-    background-color: #ff6600;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+/* Header avec carrousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slide infinite;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0%, 20% { transform: translateX(0%); }
+  25%, 45% { transform: translateX(-100%); }
+  50%, 70% { transform: translateX(-200%); }
+  75%, 100% { transform: translateX(0%); }
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.header-content h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.header-content p {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+/* Sections */
+main {
+  margin: auto;
+  padding: 15px 0px;
+}
+
+section {
+  margin-bottom: 40px;
+  background: black;
+  padding: 20px;
+}
+
+section img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.section-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section-images img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+}
+
+h2 {
+  color: white;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #cc5500;
+  background-color: #cc5500;
 }
-  
-  /* Footer */
-  footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  .footer-content {
-    max-width: 1000px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-  }
-  
-  .social-icons {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .social-icons li {
-    display: inline;
-  }
-  
-  .social-icons a {
-    color: white;
-    font-size: 1.5em;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons a {
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons a[href*="facebook.com"]:hover {
-    color: #1877F2; /* Bleu officiel de Facebook */
-  }
-  
-  .social-icons a[href*="instagram.com"]:hover {
-    color: #E4405F; /* Rose-rouge d'Instagram */
-  }
-  
-  .social-icons a[href*="youtube.com"]:hover {
-    color: #FF0000; /* Rouge de YouTube */
-  }
-  
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a[href*="facebook.com"]:hover {
+  color: #1877F2;
+}
+
+.social-icons a[href*="instagram.com"]:hover {
+  color: #E4405F;
+}
+
+.social-icons a[href*="youtube.com"]:hover {
+  color: #FF0000;
+}
+
+.contact-page {
+  background-color: black;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Manrope", sans-serif;
+  font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #ff6600;
+}
+
+/* Bouton "Remonter en haut" */
+.btn-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-top:hover {
+  background-color: #ff6600;
+  transform: scale(1.1);
+}
