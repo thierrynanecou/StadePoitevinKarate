@@ -118,6 +118,16 @@ main {
   padding: 15px 0px;
 }
 
+.img-voeux {
+  display: block;
+  margin: 20px auto;
+  max-width: 500px;  /* largeur max, tu ajustes selon ton rendu */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
 section {
   margin-bottom: 40px;
   background: black;
@@ -146,12 +156,51 @@ section img {
   border-radius: 8px;
 }
 
+.img-partenaire {
+  display: block;
+  margin: auto;
+  width: 200px;         /* Ajuste selon le rendu souhaité */
+  max-width: 60%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+
 h2 {
   color: white;
   border-bottom: 2px solid black;
   padding-bottom: 5px;
 }
 
+/* Conteneur des cards */
+.club-downloads {
+  display: flex;
+  flex-wrap: wrap; /* Permet le passage à la ligne sur les petits écrans */
+  justify-content: center;
+  gap: 25px; /* Espace entre les cards */
+  margin-top: 30px;
+}
+
+/* Style des cards individuelles */
+.download-card {
+  background-color: #333; /* Un gris foncé pour un bon contraste */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex-basis: 300px; /* Taille de base pour chaque carte. Elle s'ajustera grâce à flex-wrap */
+  flex-grow: 1; /* Permet à la carte de grandir pour remplir l'espace */
+  max-width: 350px; /* Limite la largeur des cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-card h3 {
+  color: #ff6600; /* Une couleur qui fait ressortir le titre */
+  margin-top: 0;
+  
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
 .btn {
   display: inline-block;
   padding: 10px 15px;
@@ -162,6 +211,41 @@ h2 {
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Conteneur des cards de la galerie */
+.galerie-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Style des cards de la galerie */
+.galerie-card {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex-basis: 300px;
+  flex-grow: 1;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.galerie-card h3 {
+  color: #ff6600;
+  margin-top: 0;
+  border-bottom: 2px solid #ff6600;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.galerie-card p {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #ccc;
 }
 
 .btn:hover {
