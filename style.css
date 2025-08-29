@@ -1,4 +1,5 @@
 /* Importation des polices */
+/* ==================== GLOBAL ==================== */
 body {
   font-family: "Manrope", sans-serif;
   margin: 0;
@@ -11,7 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* ==================== NAVBAR ==================== */
 nav {
   background-color: black;
   padding: 15px 0;
@@ -44,14 +45,13 @@ nav {
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
-  position: relative;
 }
 
 .nav-links a:hover {
   color: red;
 }
 
-/* Header avec carrousel */
+/* ==================== HEADER / CARROUSEL ==================== */
 .carousel {
   position: relative;
   width: 100%;
@@ -61,34 +61,20 @@ nav {
 
 .carousel-images {
   display: flex;
-  width: 300%;
+  width: calc(100% * 5); /* nombre d'images */
   height: 100%;
-  animation: slide infinite;
+  animation: slide 100s linear infinite;
 }
 
 .carousel-images img {
-  width: 100%;
+  width: 20%;
   height: 100%;
   object-fit: cover;
 }
 
 @keyframes slide {
-  0%,
-  20% {
-    transform: translateX(0%);
-  }
-  25%,
-  45% {
-    transform: translateX(-100%);
-  }
-  50%,
-  70% {
-    transform: translateX(-200%);
-  }
-  75%,
-  100% {
-    transform: translateX(0%);
-  }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-80%); }
 }
 
 .header-content {
@@ -97,37 +83,20 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
   text-align: center;
   padding: 0 20px;
 }
 
 .header-content h1 {
   font-size: 3em;
-  margin: 0;
 }
 
 .header-content p {
   font-size: 1.5em;
-  margin-top: 10px;
 }
 
-/* Sections */
-main {
-  margin: auto;
-  padding: 15px 0px;
-}
-
-.img-voeux {
-  display: block;
-  margin: 20px auto;
-  max-width: 500px;  /* largeur max, tu ajustes selon ton rendu */
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-
+/* ==================== SECTIONS ==================== */
 section {
   margin-bottom: 40px;
   background: black;
@@ -141,79 +110,44 @@ section img {
   height: auto;
 }
 
-.section-images {
-  display: flex;
-  flex-wrap: wrap; /* Pour qu'elles passent à la ligne en mobile */
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 10px 0;
-}
-
-.section-images img {
-  max-width: 30%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.img-partenaire {
-  display: block;
-  margin: auto;
-  width: 200px;         /* Ajuste selon le rendu souhaité */
-  max-width: 60%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-
 h2 {
   color: white;
   border-bottom: 2px solid black;
   padding-bottom: 5px;
 }
 
-/* Conteneur des cards */
-.club-downloads {
-  display: flex;
-  flex-wrap: wrap; /* Permet le passage à la ligne sur les petits écrans */
-  justify-content: center;
-  gap: 25px; /* Espace entre les cards */
-  margin-top: 30px;
-}
-
-/* Style des cards individuelles */
-.download-card {
-  background-color: #333; /* Un gris foncé pour un bon contraste */
-  padding: 20px;
+/* ==================== IMAGES ==================== */
+.img-voeux {
+  display: block;
+  margin: 20px auto;
+  max-width: 500px;
+  width: 100%;
   border-radius: 10px;
-  text-align: center;
-  flex-basis: 300px; /* Taille de base pour chaque carte. Elle s'ajustera grâce à flex-wrap */
-  flex-grow: 1; /* Permet à la carte de grandir pour remplir l'espace */
-  max-width: 350px; /* Limite la largeur des cartes */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.download-card h3 {
-  color: #ff6600; /* Une couleur qui fait ressortir le titre */
-  margin-top: 0;
-  
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
-.btn {
-  display: inline-block;
-  padding: 10px 15px;
-  margin: 5px;
-  background-color: #ff6600;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.section-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Conteneur des cards de la galerie */
+.section-images img {
+  max-width: 30%;
+  border-radius: 8px;
+}
+
+.img-partenaire {
+  display: block;
+  margin: auto;
+  width: 200px;
+  max-width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* ==================== CARDS ==================== */
+.club-downloads,
 .galerie-cards {
   display: flex;
   flex-wrap: wrap;
@@ -222,7 +156,7 @@ h2 {
   margin-top: 30px;
 }
 
-/* Style des cards de la galerie */
+.download-card,
 .galerie-card {
   background-color: #333;
   padding: 20px;
@@ -231,15 +165,16 @@ h2 {
   flex-basis: 300px;
   flex-grow: 1;
   max-width: 350px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.download-card h3,
 .galerie-card h3 {
   color: #ff6600;
   margin-top: 0;
   border-bottom: 2px solid #ff6600;
   padding-bottom: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .galerie-card p {
@@ -248,11 +183,40 @@ h2 {
   color: #ccc;
 }
 
+.btn {
+  display: inline-block;
+  padding: 6px;
+  margin: 5px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
 .btn:hover {
   background-color: #cc5500;
 }
 
-/* Footer */
+/* ==================== CONTACT ==================== */
+#contact {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#contact a {
+  color: white;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: #cc5500;
+}
+
+/* ==================== FOOTER ==================== */
 footer {
   background-color: #222;
   color: white;
@@ -265,9 +229,14 @@ footer {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   padding: 0 20px;
+}
+
+.adress-content {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 0.95em;
 }
 
 .social-icons {
@@ -284,49 +253,11 @@ footer {
   transition: color 0.3s ease;
 }
 
-.social-icons a[href*="facebook.com"]:hover {
-  color: #1877f2;
-}
+.social-icons a[href*="facebook.com"]:hover { color: #1877f2; }
+.social-icons a[href*="instagram.com"]:hover { color: #e4405f; }
+.social-icons a[href*="youtube.com"]:hover { color: #ff0000; }
 
-.social-icons a[href*="instagram.com"]:hover {
-  color: #e4405f;
-}
-
-.social-icons a[href*="youtube.com"]:hover {
-  color: #ff0000;
-}
-
-.contact-page {
-  background-color: black;
-  padding: 40px 20px;
-  max-width: 600px;
-  margin: auto;
-  border-radius: 10px;
-  color: white;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-family: "Manrope", sans-serif;
-  font-size: 1em;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: 2px solid #ff6600;
-}
-
-/* Bouton "Remonter en haut" */
+/* ==================== BOUTON REMONTER EN HAUT ==================== */
 .btn-top {
   position: fixed;
   bottom: 25px;
@@ -337,10 +268,8 @@ footer {
   padding: 12px 15px;
   border-radius: 50%;
   font-size: 20px;
-  text-align: center;
-  text-decoration: none;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
