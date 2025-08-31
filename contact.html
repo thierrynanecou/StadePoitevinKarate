@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Stade Poitevin Karaté</title>
-  <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Stade Poitevin Karaté</title>
 
-  <!-- Navbar (identique à index.html) -->
-  <nav>
-    <div class="nav-container">
-      <img src="logo/logo_blanc.png" alt="Logo Stade Poitevin Karaté" class="logo" />
-      <ul class="nav-links">
-        <li><a href="index.html#accueil">Accueil</a></li>
-        <li><a href="index.html#le_club">Le club</a></li>
-        <li><a href="index.html#infos">Infos & Événements</a></li>
-        <li><a href="index.html#galerie">Galerie</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- Lien vers ton style global -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Section Contact -->
-  <main>
-    <section class="contact-page">
-      <h2>Nous contacter</h2>
-      <p style="color:white;">Pour toute demande d'information, vous pouvez remplir le formulaire ci-dessous :</p>
-      <form action="mailto:redeye974@hotmail.fr" method="post" enctype="text/plain" class="contact-form">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required />
+    <!-- Polices et icônes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav>
+      <div class="nav-container">
+        <img src="logo/logo_blanc.png" alt="Logo Stade Poitevin Karaté" class="logo" />
+        <ul class="nav-links">
+          <li><a href="index.html#top">Accueil</a></li>
+          <li><a href="index.html#le_club">Le club</a></li>
+          <li><a href="index.html#infos">Infos & Événements</a></li>
+          <li><a href="index.html#galerie">Galerie</a></li>
+          <li><a href="index.html#partenaire">Partenaires</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required />
+    <!-- ==================== FORMULAIRE DE CONTACT ==================== -->
+    <main class="contact-container">
+      <div class="contact-info">
+        <img src="img/Affiche-Infos-2025-2026.jpg" alt="Affiche multi-disciplines">
+        <h2>EMPLACEMENT</h2>
+        <p>2 rue de la fraternité<br />86180 Buxerolles</p>
+        <p>Tél : 06.87.41.80.07 / 06.72.19.75.01</p>
 
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+        <h2>SUIVEZ-NOUS</h2>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/StadePoitevinKarateContact/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/club_spk/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@Club_spk" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
 
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
-    </section>
-  </main>
+      <div class="contact-form">
+        <h2>FORMULAIRE DE CONTACT</h2>
+        <form action="mailto:redeye974@hotmail.fr" method="post" enctype="text/plain">
+          <input type="text" name="nom" placeholder="Votre nom" required />
+          <input type="email" name="email" placeholder="Votre email" required />
+          <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+          <button type="submit">Soumettre</button>
+        </form>
+      </div>
+    </main>
 
-  <!-- Footer (identique) -->
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Stade Poitevin Karaté - Tous droits réservés</p>
-      <ul class="social-icons">
-        <li><a href="https://www.facebook.com/StadePoitevinKarateContact/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/club_spk/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.youtube.com/@Club_spk" target="_blank"><i class="fab fa-youtube"></i></a></li>
-      </ul>
-    </div>
-  </footer>
-
-</body>
+   
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Stade Poitevin Karaté - Tous droits réservés</p>
+        
+      </div>
+    </footer>
+  </body>
 </html>
